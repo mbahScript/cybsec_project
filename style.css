@@ -1,0 +1,976 @@
+* {
+    font-family: Poppins;
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3d3ee4;
+    --secondary-color: #ff872e;
+    --white: #ffffff;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px;
+    /* border: 1px solid; */
+}
+
+.menu {
+    float: right;
+}
+
+nav.side {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    backdrop-filter: blur(15px);
+    height: 300px;
+    width: 200px;
+    border-bottom-left-radius: 50px;
+}
+
+.web-menu {
+    display: none;
+}
+
+#mobile-cta {
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+ul.primary-nav {
+    list-style-type: none;
+    padding: 25px;
+    line-height: 35px;
+    /* border: 1px solid; */
+}
+
+ul.secondary-nav {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bold;
+}
+
+li a {
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--white);
+}
+
+li a:hover {
+    color: wheat;
+}
+
+#logo {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#wlogo {
+    visibility: hidden;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    color: var(--white);
+}
+
+section.hero {
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: var(--white);
+}
+
+main {
+    display: grid;
+}
+
+.subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    /* text-indent: 50px; */
+}
+
+section.main-cnt {
+    padding: 10px;
+}
+
+.custom-select {
+    background-color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+select {
+    border: none;
+    outline: none;
+    background-color: var(--white);
+    padding: 5px;
+}
+
+div.button-cta {
+    background-color: var(--secondary-color);
+    padding: 5px;
+    font-weight: bold;
+}
+
+div.button-cta:hover {
+    background-color: var(--primary-color);
+    font-weight: normal;
+}
+
+img.image {
+    /* width: 100%; */
+    max-width: 100%;
+}
+
+.expert {
+    font-size: small;
+    float: right;
+    padding-top: 10px;
+}
+
+.subhead-b {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+section.more-info {
+    display: grid;
+    width: 100%;
+}
+
+div.col {
+    border: 1px ridge;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+b {
+    display: block;
+}
+
+/* MQ */
+@media screen and (min-width: 500px) {
+    section.more-info {
+        grid-template-columns: auto auto;
+    }
+
+    /* img.image {
+        border-bottom-left-radius: 10px;
+    } */
+}
+
+@media screen and (min-width: 900px) {
+    img.menu {
+        display: none;
+    }
+
+    .web-menu {
+        /* border: 1px solid; */
+        display: inline-block;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    #logo { 
+        display: none;
+    }
+
+    #wlogo {
+        visibility: visible;
+        margin-right: 25px;
+    }
+
+    .web-primary-nav {
+        display: flex;
+        list-style-type: none;
+        z-index: 1;
+    }
+
+    .web-secondary-nav {
+        position: absolute;
+        right: 0;
+        list-style-type: none;
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: 5px 5px;
+        z-index: 1;
+    }
+
+    .signup {
+        color: black;
+    }
+
+    .expert {
+        padding-top: 40px;
+        float: right;
+    }
+
+    .signup:hover {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    li a {
+        padding: 15px;
+        /* border: 1px solid; */
+    }
+
+    div.custom-select {
+        background-color: var(--white);
+        border-radius: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        position: relative;
+        z-index: 1;
+        font-size: small;
+        width: 550px;
+    }
+    
+    select {
+        /* A reset of styles, including removing the default dropdown arrow */
+        /* appearance: none; */
+        /* Additional resets for further consistency */
+        background-color: transparent;
+        border: none;
+        border-radius: 40px;
+        /* padding: 20px 15px; */
+        padding: 20px;
+        margin: 0;
+        cursor: pointer;
+        background-color: var(--white);
+    }
+    
+    select {
+        outline: none;
+    }
+    
+    div.button-cta {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        text-align: center;
+        border-radius: 40px;
+        /* padding: 20px 15px; */
+        padding: 20px;
+        margin-right: -10px;
+        width: 150px;
+    }    
+
+    section.more-info {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        padding: 40px;
+    }
+
+    section.hero {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        width: 495px;
+        height: 470px;
+        padding-bottom: 20px;
+    }
+
+    section.hero-img {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        /* width: 390px; */
+        height: 540px;
+    }
+
+    img.image {
+        border-bottom-left-radius: 20px;
+    }
+
+    section.more-info {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        /* border: 1px solid; */
+        position: relative;
+        top: 80px;
+    }
+
+    section.hero-img, .image {
+        position: relative;
+        bottom: 25px;
+    }
+
+    body {
+        position: absolute;
+    }
+
+    section.main-cnt {
+        /* border: 1px solid; */
+        padding: 50px;
+        font-size: 25px;
+        width: 450px;
+    }
+
+    p.subhead-b {
+        font-size: 16px;
+    }
+
+    div.col {
+        border: 1px ridge;
+    }
+
+    div.second {
+        position: relative;
+        bottom: 100px;
+    }
+
+    div.third {
+        position: relative;
+        bottom: 30px;
+    }
+
+    div.fourth {
+        position: relative;
+        bottom: 180px;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    section.hero {
+        width: 510px;
+    }
+
+    .expert {
+        padding-top: 60px;
+    }
+
+    div.custom-select {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    section.hero {
+        width: 530px;
+    }
+}
+
+@media screen and (min-width: 970px) {
+    section.hero {
+        width: 550px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    section.hero {
+        width: 570px;
+    }
+
+    div.custom-select {
+        width: 600px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 25px;
+    }
+
+    .expert {
+        padding-top: 55px;
+    }
+}
+
+@media screen and (min-width: 1010px) {
+    section.hero {
+        width: 590px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 27px;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    section.hero {
+        width: 610px;
+    }
+
+    div.custom-select {
+        width: 630px;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    section.hero {
+        width: 630px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 30px;
+    }
+
+    .expert {
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width: 1070px) {
+    section.hero {
+        width: 650px;
+    }
+
+    div.custom-select {
+        width: 650px;
+    }
+}
+
+@media screen and (min-width: 1090px) {
+    section.hero {
+        width: 670px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 35px;
+    }
+
+    div.custom-select {
+        width: 680px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    section.hero {
+        width: 690px;
+    }
+}
+
+@media screen and (min-width: 1130px) {
+    section.hero {
+        width: 710px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 40px;
+    }
+
+    div.custom-select {
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    section.hero {
+        width: 730px;
+    }
+
+    div.custom-select {
+        width: 750px;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    section.hero {
+        width: 750px;
+    }
+}
+
+@media screen and (min-width: 1190px) {
+    section.hero {
+        width: 770px;
+    }
+
+    div.custom-select {
+        width: 780px;
+    }
+}
+
+@media screen and (min-width: 1210px) {
+    section.hero {
+        height: 500px;
+        width: 750px;
+    }
+
+    div.custom-select {
+        margin-top: 50px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+    section.hero {
+        width: 730px;
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    section.hero {
+        width: 750px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        box-sizing: border-box;
+        margin: 10px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        line-height: 1.3em;
+    }
+
+    .expert {
+        padding-top: 50px;
+    }
+
+    section.main-cnt div.container h1 {
+        /* border: 1px solid; */
+        font-size: 45px;
+        width: 430px;
+    }
+}
+
+@media screen and (min-width: 1270px) {
+    section.hero {
+        width: 800px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 45px;
+    }
+
+    div.custom-select {
+        width: 800px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 700px;
+    }
+
+    div.expert {
+        padding-top: 45px;
+    }
+
+    section.main-cnt div.container {
+        /* border: 1px solid; */
+        margin-left: 40px;
+    }
+
+    section.more-info {
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1290px) {
+    section.hero {
+        width: 820px;
+    }
+}
+
+@media screen and (min-width: 1330px) {
+    section.hero {
+        width: 830px;
+    }
+
+    div.expert {
+        padding-right: -30px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    section.hero {
+        width: 840px;
+    }
+}
+
+@media screen and (min-width: 1370px) {
+    section.hero {
+        width: 870px;
+    }
+
+    div.expert {
+        /* border: 1px solid; */
+        padding: unset;
+        position: relative;
+        left: 50px;
+        top: 50px;
+    }
+}
+
+@media screen and (min-width: 1390px) {
+    section.hero {
+        width: 890px;
+        height: 560px;
+    }
+
+    section.main-cnt div.container {
+        margin-left: 60px;
+    }
+
+    section.more-info {
+        padding: 60px;
+    }
+
+    div.custom-select {
+        width: 830px;
+    }
+}
+
+@media screen and (min-width: 1410px) {
+    section.hero {
+        width: 910px;
+        height: 570px;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    section.hero {
+        width: 920px;
+        height: 590px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 750px;
+    }
+
+    section.hero div.container h1 {
+        font-size: 50px;
+        line-height: 1.3em;
+    }
+
+    div.custom-select {
+        width: 870px;
+    }
+}
+
+@media screen and (min-width: 1490px) {
+    section.hero {
+        height: 630px;
+    }
+
+    section.hero div.container h1 {
+        /* border: 1px solid; */
+        font-size: 55px;
+    }
+
+    div.expert {
+        top: 70px;
+    }
+
+    section.main-cnt div.container h1 {  
+        font-size: 50px;  
+        /* border: 1px solid;   */
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1510px) {
+    section.hero {
+        width: 950px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 800px;
+    }
+
+    div.custom-select {
+        width: 920px;
+    }
+}
+
+@media screen and (min-width: 1540px) {
+    section.hero {
+        width: 990px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 830px;
+    }
+
+    div.custom-select {
+        width: 950px;
+    }
+}
+
+@media screen and (min-width: 1560px) {
+    section.hero {
+        width: 1010px;
+    }
+}
+
+@media screen and (min-width: 1580px) {
+    section.hero {
+        width: 1040px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 850px;
+    }
+
+    div.custom-select {
+        width: 1000px;
+    }
+
+    section.main-cnt div.container {
+        /* border: 1px solid; */
+        margin: 80px;
+    }
+
+    section.more-info {
+        top: 40px;
+    }
+
+    div.second {
+        bottom: 150px;
+    }
+
+    div.fourth {
+        bottom: 250px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    section.hero {
+        width: 1060px;
+    }
+
+    li a {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    section.hero {
+        width: 1080px;
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    section.hero {
+        width: 1100px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 900px;
+    }
+
+    section.hero div.container h1 {
+        font-size: 60px;
+    }
+
+    div.custom-select {
+        width: 1060px;
+    }
+}
+
+@media screen and (min-width: 1660px) {
+    section.hero {
+        width: 1120px;
+    }
+
+    section.main-cnt div.container {
+        margin: 100px;
+        /* border: 1px solid; */
+        width: 500px;
+    }
+
+    div.second {
+        bottom: 200px;
+    }
+
+    div.fourth {
+        bottom: 300px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    section.hero {
+        width: 1150px;
+    }
+
+    div.expert {
+        left: 70px;
+    }
+
+    div.custom-select {
+        width: 1080px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    section.hero {
+        width: 1170px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 940px;
+        padding-top: 65px;
+    }
+
+    section.hero div.container h1 {
+        font-size: 55px;
+    }
+
+    div.custom-select {
+        width: 1090px;
+        margin-top: 60px;
+        width: 1100px;
+    }
+
+    div.expert {
+        left: 75px;
+        /* border: 1px solid; */
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 1720px) {
+    section.hero {
+        width: 1190px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 960px;
+        padding-top: 65px;
+    }
+
+    div.custom-select {
+        width: 1120px;
+    }
+}
+
+@media screen and (min-width: 1760px) {
+    section.hero {
+        width: 1210px;
+    }
+}
+
+@media screen and (min-width: 1780px) {
+    section.hero {
+        width: 1230px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 1000px;
+        padding-top: 65px;
+    }
+
+    div.custom-select {
+        width: 1170px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    section.hero {
+        width: 1250px;
+    }
+}
+
+@media screen and (min-width: 1820px) {
+    section.hero {
+        width: 1270px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 1050px;
+    }
+
+    div.custom-select {
+        width: 1210px;
+    }
+}
+
+@media screen and (min-width: 1840px) {
+    section.hero {
+        width: 1290px;
+    }
+}
+
+@media screen and (min-width: 1860px) {
+    section.hero {
+        width: 1320px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 1080px;
+    }
+
+    div.custom-select {
+        width: 1240px;
+    }
+}
+
+@media screen and (min-width: 1880px) {
+    section.hero {
+        width: 1350px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 1100px;
+    }
+
+    div.custom-select {
+        width: 1270px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    section.hero {
+        width: 1370px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    section.hero {
+        width: 1390px;
+    }
+
+    section.hero div.container {
+        /* border: 1px solid; */
+        width: 1150px;
+    }
+
+    div.custom-select {
+        width: 1320px;
+    }
+}
